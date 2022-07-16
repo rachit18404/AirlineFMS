@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DataLayer">
+      <HintPath>..\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

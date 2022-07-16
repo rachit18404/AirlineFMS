@@ -1,0 +1,13 @@
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.deps.json
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\bin\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.AssemblyReference.cache
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfoInputs.cache
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.AssemblyInfo.cs
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.dll
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.pdb
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\Rachit.Jaiswal\Desktop\AirlineFMS\DataLayer\obj\Debug\netcoreapp3.1\DataLayer.csproj.CopyComplete
