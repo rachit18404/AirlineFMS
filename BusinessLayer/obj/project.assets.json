@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rachit.Jaiswal\\Desktop\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj",
       "projectName": "BusinessLayer",
-      "projectPath": "C:\\Users\\Rachit.Jaiswal\\Desktop\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj",
+      "projectPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj",
       "packagesPath": "C:\\Users\\Rachit.Jaiswal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rachit.Jaiswal\\Desktop\\AirlineFMS\\BusinessLayer\\obj\\",
+      "outputPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\BusinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rachit.Jaiswal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Rachit.Jaiswal\\Desktop\\AirlineFMS\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\Rachit.Jaiswal\\Desktop\\AirlineFMS\\Models\\Models.csproj"
+            "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\Models\\Models.csproj"
             }
           }
         }

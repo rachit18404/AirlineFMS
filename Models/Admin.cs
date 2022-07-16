@@ -6,5 +6,7 @@ namespace Models
 {
     class Admin
     {
+        public int adminId { set; get; }
+        public string password { set; get; }
     }
 }
