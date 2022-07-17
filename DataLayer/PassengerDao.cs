@@ -15,11 +15,12 @@ namespace DataLayer
         {
           try
             {
-                Qry = "Add_Passenger_SP";
+                Qry = "AddPassenger_SP";
                 command = new SqlCommand(Qry, connection);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@PassengerId", passenger.passengerId);
+               
                 command.Parameters.AddWithValue("@EmailId", passenger.emailId);
+                command.Parameters.AddWithValue("@PassengerPassword",passenger.passengerPassword);
                 command.Parameters.AddWithValue("@PassengerName", passenger.passengerName);
                 command.Parameters.AddWithValue("@PhoneNo", passenger.phoneNo);
                 connection.Open();
@@ -41,7 +42,7 @@ namespace DataLayer
             List<Passenger> passengers = new List<Passenger>();
             try
             {
-                Qry = "Get_Passengers_SP";
+                Qry = "GetPassengerDetails_SP";
                 command = new SqlCommand(Qry, connection);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 
@@ -53,9 +54,10 @@ namespace DataLayer
                     {
                         Passenger passenger = new Passenger();
                         passenger.passengerId= (int)reader[0];
-                        passenger.passengerName = reader[1].ToString();
-                        passenger.emailId = reader[2].ToString();
-                        passenger.phoneNo = (long)reader[3];
+                        passenger.passengerName = reader[3].ToString();
+                        passenger.emailId = reader[1].ToString();
+                        passenger.passengerPassword = reader[2].ToString();
+                        passenger.phoneNo = (long)reader[4];
                         //string row = $"eid:{reader[0]} ename:{reader[1]} projectCode:{reader[2]} salary:{reader[3]}";
                         //Console.WriteLine(row);
                         passengers.Add(passenger);
@@ -74,6 +76,8 @@ namespace DataLayer
             }
             return passengers;
         }
+
+        
 
     }
 }
