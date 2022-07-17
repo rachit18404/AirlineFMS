@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Models
 {
-    class Admin
+    public class Admin
     {
         public int adminId { set; get; }
         public string password { set; get; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Models
 {
-    class Booking
+    public class Booking
     {
         public int bookingId { set; get; }
         public int flightId { set; get; }
