@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\FMSApi",
-    "\\FMSApi\\Controllers",
-    "\\Models"
+    ""
   ],
-  "SelectedNode": "\\FMSApi\\FMSApi.sln",
+  "SelectedNode": "\\FMSApi.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj": {}
+    "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Rachit.Jaiswal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Sunil.Sahu.GEP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rachit.Jaiswal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sunil.Sahu.GEP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\Models\\Models.csproj"
+              "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj"
               }
             }
           }
@@ -72,17 +72,17 @@
         }
       }
     },
-    "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\Models\\Models.csproj": {
+    "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\Rachit.Jaiswal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\Models\\obj\\",
+        "projectPath": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\Sunil.Sahu.GEP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rachit.Jaiswal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sunil.Sahu.GEP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

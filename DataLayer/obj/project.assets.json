@@ -491,19 +491,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rachit.Jaiswal\\.nuget\\packages\\": {}
+    "C:\\Users\\Sunil.Sahu.GEP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\DataLayer\\DataLayer.csproj",
-      "packagesPath": "C:\\Users\\Rachit.Jaiswal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rachit.Jaiswal\\source\\repos\\AirlineFMS\\DataLayer\\obj\\",
+      "projectPath": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\DataLayer\\DataLayer.csproj",
+      "packagesPath": "C:\\Users\\Sunil.Sahu.GEP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rachit.Jaiswal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sunil.Sahu.GEP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

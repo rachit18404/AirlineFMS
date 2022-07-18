@@ -16,3 +16,12 @@ C:\Users\Rachit.Jaiswal\source\repos\AirlineFMS\Models\obj\Debug\netcoreapp3.1\M
 C:\Users\Rachit.Jaiswal\source\repos\AirlineFMS\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
 C:\Users\Rachit.Jaiswal\source\repos\AirlineFMS\Models\obj\Debug\netcoreapp3.1\Models.dll
 C:\Users\Rachit.Jaiswal\source\repos\AirlineFMS\Models\obj\Debug\netcoreapp3.1\Models.pdb
+C:\Users\Sunil.Sahu.GEP\source\miniproject\backend\AirlineFMS\Models\bin\Debug\netcoreapp3.1\Models.deps.json
+C:\Users\Sunil.Sahu.GEP\source\miniproject\backend\AirlineFMS\Models\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\Sunil.Sahu.GEP\source\miniproject\backend\AirlineFMS\Models\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\Sunil.Sahu.GEP\source\miniproject\backend\AirlineFMS\Models\obj\Debug\netcoreapp3.1\Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sunil.Sahu.GEP\source\miniproject\backend\AirlineFMS\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfoInputs.cache
+C:\Users\Sunil.Sahu.GEP\source\miniproject\backend\AirlineFMS\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfo.cs
+C:\Users\Sunil.Sahu.GEP\source\miniproject\backend\AirlineFMS\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
+C:\Users\Sunil.Sahu.GEP\source\miniproject\backend\AirlineFMS\Models\obj\Debug\netcoreapp3.1\Models.dll
+C:\Users\Sunil.Sahu.GEP\source\miniproject\backend\AirlineFMS\Models\obj\Debug\netcoreapp3.1\Models.pdb

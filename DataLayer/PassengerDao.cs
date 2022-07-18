@@ -9,7 +9,7 @@ namespace DataLayer
     {
         SqlCommand command = null;
         string Qry = string.Empty;
-        SqlConnection connection = new SqlConnection(@"Data Source=MUM02L10248\SQLEXPRESS;Initial Catalog=AMS;User ID=sa;Password=Password123");
+        SqlConnection connection = new SqlConnection(@"Data Source=HYD-CDVP2N3\SQLEXPRESS01;Initial Catalog=AMS;Integrated Security=True");
 
         public void AddPassenger(Passenger passenger)
         {
@@ -101,7 +101,7 @@ namespace DataLayer
             }
             catch(Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {

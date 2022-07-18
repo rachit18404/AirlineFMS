@@ -34,7 +34,7 @@ namespace BusinessLayer
             }
             catch(Exception ex)
             {
-                throw;
+                throw ex;
             }
             return passengers;
         }
@@ -47,7 +47,7 @@ namespace BusinessLayer
             }
             catch(Exception ex)
             {
-                throw;
+                throw ex;
             }
             return p;
         }
