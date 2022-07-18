@@ -10,7 +10,7 @@ namespace Models
         public string destinationAddress { set; get; }
         public  string departuretTime { set; get; }
         public string arrivalTime { set; get; }
-        public long price { set; get; }
+     
         public long business_seat_price { get; set; }
         public long economy_seat_price { get; set; }
         public int business_seat { get; set; }

@@ -24,7 +24,7 @@ namespace DataLayer
                 command.Parameters.AddWithValue("@DepartureTime", flight.departuretTime);
                 command.Parameters.AddWithValue("@ArrivalTime", flight.arrivalTime);
 
-                command.Parameters.AddWithValue("@Price", flight.price);
+             
                 command.Parameters.AddWithValue("@FlightName", flight.flightName);
                 command.Parameters.AddWithValue("@Business_seat_price", flight.business_seat_price);
                 command.Parameters.AddWithValue("@Economy_seat_price", flight.economy_seat_price);
@@ -66,7 +66,7 @@ namespace DataLayer
                         flight.sourceAddress = reader["sourceAddress"].ToString();
                         flight.destinationAddress = reader["destinationAddress"].ToString();
                         flight.departuretTime = reader["departureTime"].ToString();
-                        flight.price = (long)reader["price"];
+                      
                         flight.flightName = reader["flightName"].ToString();
                         flight.business_seat_price = (long)reader["business_seat_price"];
                         flight.economy_seat_price = (long)reader["economy_seat_price"];
