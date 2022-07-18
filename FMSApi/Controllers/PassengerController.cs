@@ -45,6 +45,18 @@ namespace FMSApi.Controllers
                 return StatusCode(200, ex.Message);
             }
         }
+        [HttpGet, Route("GetByLogin")]
+        public IActionResult GetByLogin(Passenger passenger)
+        {
+            try
+            {
+                return StatusCode(200, passengerBo.GetByLogin(passenger));
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(200, ex.Message);
+            }
+        }
 
     }
 }

@@ -77,7 +77,38 @@ namespace DataLayer
             return passengers;
         }
 
-        
+        public Passenger GetByLogin(Passenger passenger)
+        {
+            Passenger p = new Passenger();
+            try
+            {
+                Qry = "GetPassenger_SP";
+                command = new SqlCommand(Qry, connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@email", passenger.emailId);
+                command.Parameters.AddWithValue("@password", passenger.passengerPassword);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    p.passengerId = (int)reader[0];
+                    p.passengerName = reader[3].ToString();
+                    p.emailId = reader[1].ToString();
+                    p.passengerPassword = reader[2].ToString();
+                    p.phoneNo = (long)reader[4];
+                }
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return p;
+        }
 
     }
 }

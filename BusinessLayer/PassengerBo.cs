@@ -38,6 +38,19 @@ namespace BusinessLayer
             }
             return passengers;
         }
+        public Passenger GetByLogin(Passenger passenger)
+        {
+            Passenger p=new Passenger();
+            try
+            {
+                p = passengerDao.GetByLogin(passenger);
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+            return p;
+        }
 
     }
 }
