@@ -90,6 +90,71 @@ namespace DataLayer
             }
             return flights;
         }
+        public void DeleteFlight(int flightId)
+        {
+            try
+            {
+                Qry = $"DeleteFlightByFlightId_SP {flightId}";
+                command = new SqlCommand(Qry, connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public List<Flight> GetAllFlights()
+        {
+            List<Flight>flights = new List<Flight>();
+            try
+            {
+                Qry = "Get_All_Flights_SP";
+                command = new SqlCommand(Qry, connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Flight flight = new Flight();
+                        flight.flightId = (int)reader["flightId"];
+                        flight.arrivalTime = reader["arrivalTime"].ToString();
+                        flight.sourceAddress = reader["sourceAddress"].ToString();
+                        flight.destinationAddress = reader["destinationAddress"].ToString();
+                        flight.departuretTime = reader["departureTime"].ToString();
+
+                        flight.flightName = reader["flightName"].ToString();
+                        flight.business_seat_price = (long)reader["business_seat_price"];
+                        flight.economy_seat_price = (long)reader["economy_seat_price"];
+                        flight.business_seat = (int)reader["business_seat"];
+                        flight.economy_seat = (int)reader["economy_seat"];
+                        //string row = $"eid:{reader[0]} ename:{reader[1]} projectCode:{reader[2]} salary:{reader[3]}";
+                        //Console.WriteLine(row);
+                        flights.Add(flight);
+                    }
+                }
+                else
+                    Console.WriteLine("NO flights available");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return flights;
+        
+         }
     }
 }
 

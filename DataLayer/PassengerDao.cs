@@ -64,7 +64,7 @@ namespace DataLayer
                     }
                 }
                 else
-                    Console.WriteLine("NO Proudcts");
+                    Console.WriteLine("NO Passengers");
             }
             catch (Exception ex)
             {

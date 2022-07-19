@@ -37,5 +37,30 @@ namespace BusinessLayer
                 throw;
             }
         }
+        public void  DeleteFlight(int flightId)
+        {
+            try
+            {
+                flightDao.DeleteFlight(flightId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public List<Flight> GetAllFlights()
+        {
+            List<Flight> flights = new List<Flight>();
+            try
+            {
+                flights = flightDao.GetAllFlights();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return flights;
+        }
     }
 }

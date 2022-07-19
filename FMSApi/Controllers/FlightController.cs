@@ -45,7 +45,33 @@ namespace FMSApi.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpDelete,Route("DeleteFlight/{flightId}")]
+        public IActionResult DeleteFlight(int flightId)
+        {
+            try
+            {
+                flightBo.DeleteFlight(flightId);
+                return StatusCode(200);
+            }
+            catch (Exception ex)
+            {
 
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpGet, Route("GetAllFlights")]
+        public IActionResult GetAllFlights()
+        {
+            try
+            {
+                return StatusCode(200, flightBo.GetAllFlights());
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(200, ex.Message);
+            }
+        }
     }
 }
 
