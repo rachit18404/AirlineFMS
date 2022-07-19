@@ -57,6 +57,20 @@ namespace FMSApi.Controllers
                 return StatusCode(200, ex.Message);
             }
         }
+        [HttpPut, Route("UpdatePassengerInfo")]
+        public IActionResult UpdatePassengerInfo(Passenger passenger)
+        {
+            try
+            {
+                passengerBo.UpdatePassengerInfo(passenger);
+                return StatusCode(200);
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(500, ex.Message);
+            }
+        }
 
     }
 }

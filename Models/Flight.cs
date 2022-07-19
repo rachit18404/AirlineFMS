@@ -8,7 +8,7 @@ namespace Models
         public string flightName { set; get; }
         public string sourceAddress { set; get; }
         public string destinationAddress { set; get; }
-        public  string departuretTime { set; get; }
+        public  string departureTime { set; get; }
         public string arrivalTime { set; get; }
      
         public long business_seat_price { get; set; }

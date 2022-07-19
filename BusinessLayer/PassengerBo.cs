@@ -51,6 +51,18 @@ namespace BusinessLayer
             }
             return p;
         }
+        public void UpdatePassengerInfo(Passenger passenger)
+        {
+            try
+            {
+                passengerDao.UpdatePassengerInfo(passenger);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
     }
 }

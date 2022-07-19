@@ -109,6 +109,33 @@ namespace DataLayer
             }
             return p;
         }
+        public void UpdatePassengerInfo(Passenger passenger)
+        {
+            try
+            {
+                Qry = $"EditPassengerinfo_SP";
+                command = new SqlCommand(Qry, connection);
+                command.Parameters.AddWithValue("@passengerId", passenger.passengerId);
+                command.Parameters.AddWithValue("@passengerName", passenger.passengerName);
+                command.Parameters.AddWithValue("@passengerPassword", passenger.passengerPassword);
+                command.Parameters.AddWithValue("@emailId", passenger.emailId);
+                command.Parameters.AddWithValue("@phoneNo", passenger.phoneNo);
+               
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                connection.Open();
+                command.ExecuteNonQuery();
+      
+             }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
 
     }
 }

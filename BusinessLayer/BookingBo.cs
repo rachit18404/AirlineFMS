@@ -25,7 +25,19 @@ namespace BusinessLayer
             }
 
         }
-    
+        public List<Booking> GetAllBookings()
+        {
+            List<Booking> bookings = new List<Booking>();
+            try
+            {
+                bookings = bookingDao.GetAllBookings();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return bookings;
+        }
 
     }
 }

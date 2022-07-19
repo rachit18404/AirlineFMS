@@ -62,5 +62,17 @@ namespace BusinessLayer
             }
             return flights;
         }
+       public void EditFlight(Flight flight)
+        {
+            try
+            {
+                flightDao.EditFlight(flight);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

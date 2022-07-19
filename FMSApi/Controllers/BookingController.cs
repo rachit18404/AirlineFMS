@@ -32,6 +32,18 @@ namespace FMSApi.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet, Route("GetAllBookings")]
+        public IActionResult GetAllBookings()
+        {
+            try
+            {
+                return StatusCode(200, bookingBo.GetAllBookings());
+            }
+            catch (Exception ex)
+            {
 
+                return StatusCode(200, ex.Message);
+            }
+        }
     }
 }

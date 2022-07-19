@@ -21,7 +21,7 @@ namespace DataLayer
 
                 command.Parameters.AddWithValue("@SourceAddress", flight.sourceAddress);
                 command.Parameters.AddWithValue("@DestinationAddress", flight.destinationAddress);
-                command.Parameters.AddWithValue("@DepartureTime", flight.departuretTime);
+                command.Parameters.AddWithValue("@DepartureTime", flight.departureTime);
                 command.Parameters.AddWithValue("@ArrivalTime", flight.arrivalTime);
 
              
@@ -65,7 +65,7 @@ namespace DataLayer
                         flight.arrivalTime = reader["arrivalTime"].ToString();
                         flight.sourceAddress = reader["sourceAddress"].ToString();
                         flight.destinationAddress = reader["destinationAddress"].ToString();
-                        flight.departuretTime = reader["departureTime"].ToString();
+                        flight.departureTime = reader["departureTime"].ToString();
                       
                         flight.flightName = reader["flightName"].ToString();
                         flight.business_seat_price = (long)reader["business_seat_price"];
@@ -129,7 +129,7 @@ namespace DataLayer
                         flight.arrivalTime = reader["arrivalTime"].ToString();
                         flight.sourceAddress = reader["sourceAddress"].ToString();
                         flight.destinationAddress = reader["destinationAddress"].ToString();
-                        flight.departuretTime = reader["departureTime"].ToString();
+                        flight.departureTime = reader["departureTime"].ToString();
 
                         flight.flightName = reader["flightName"].ToString();
                         flight.business_seat_price = (long)reader["business_seat_price"];
@@ -155,6 +155,36 @@ namespace DataLayer
             return flights;
         
          }
+        public void EditFlight(Flight flight)
+        {
+            try
+            {
+                Qry = $"EditFlight_SP";
+                command = new SqlCommand(Qry, connection);
+                command.Parameters.AddWithValue("@flightId", flight.flightId);
+                command.Parameters.AddWithValue("@flightName", flight.flightName);
+                command.Parameters.AddWithValue( "@sourceAddress", flight.sourceAddress);
+                command.Parameters.AddWithValue("@destinationAddress", flight.destinationAddress);
+                command.Parameters.AddWithValue("@departureTime", flight.departureTime);
+                command.Parameters.AddWithValue("@arrivalTime", flight.arrivalTime);
+                command.Parameters.AddWithValue("@business_seat_price", flight.business_seat_price);
+                command.Parameters.AddWithValue("@economy_seat_price", flight.economy_seat_price);
+                command.Parameters.AddWithValue("@business_seat", flight.business_seat);
+                command.Parameters.AddWithValue("@economy_seat", flight.economy_seat);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
 

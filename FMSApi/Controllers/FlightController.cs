@@ -72,6 +72,20 @@ namespace FMSApi.Controllers
                 return StatusCode(200, ex.Message);
             }
         }
+        [HttpPut, Route("EditFlight")]
+        public IActionResult EditFlight(Flight flight)
+        {
+            try
+            {
+                flightBo.EditFlight(flight);
+                return StatusCode(200);
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }
 
