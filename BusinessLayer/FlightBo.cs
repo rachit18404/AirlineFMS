@@ -74,5 +74,17 @@ namespace BusinessLayer
                 throw;
             }
         }
+        public Flight GetFlightbyFlightId(int flightId)
+        {
+            try
+            {
+                return flightDao.GetFlightbyFlightId(flightId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

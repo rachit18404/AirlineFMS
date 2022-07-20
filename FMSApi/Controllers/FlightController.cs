@@ -86,6 +86,20 @@ namespace FMSApi.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet,Route("GetFlightbyFlightId/{flightId}")]
+        public IActionResult GetFlightbyFlightId(int flightId)
+        {
+            try
+            {
+                var flight = flightBo.GetFlightbyFlightId(flightId);
+                return StatusCode(200, flight);
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }
 

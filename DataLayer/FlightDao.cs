@@ -185,6 +185,54 @@ namespace DataLayer
                 connection.Close();
             }
         }
+        public Flight GetFlightbyFlightId(int flightId)
+        {
+            Flight flight = new Flight();
+            try
+            {
+                Qry = "GetFlightByFlightId";
+                command = new SqlCommand(Qry, connection);
+                command.Parameters.AddWithValue("@flightId", flightId);
+               
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                       
+                        flight.flightId = (int)reader["flightId"];
+                        flight.arrivalTime = reader["arrivalTime"].ToString();
+                        flight.sourceAddress = reader["sourceAddress"].ToString();
+                        flight.destinationAddress = reader["destinationAddress"].ToString();
+                        flight.departureTime = reader["departureTime"].ToString();
+
+                        flight.flightName = reader["flightName"].ToString();
+                        flight.business_seat_price = (long)reader["business_seat_price"];
+                        flight.economy_seat_price = (long)reader["economy_seat_price"];
+                        flight.business_seat = (int)reader["business_seat"];
+                        flight.economy_seat = (int)reader["economy_seat"];
+                        //string row = $"eid:{reader[0]} ename:{reader[1]} projectCode:{reader[2]} salary:{reader[3]}";
+                        //Console.WriteLine(row);
+                      
+                    }
+                }
+                else
+                    Console.WriteLine("NO flights available");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return flight;
+        }
+
     }
 }
 
