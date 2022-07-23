@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
@@ -10,7 +11,7 @@ namespace DataLayer
     {
         SqlCommand command = null;
         string Qry = string.Empty;
-        SqlConnection connection = new SqlConnection(@"Data Source=HYD-CDVP2N3\SQLEXPRESS01;Initial Catalog=AMS;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(@"Data Source=HYD-5DVP2N3\SQLEXPRESS;Initial Catalog=AMS;Integrated Security=True");
 
         public void AddBooking(Booking booking)
         {
@@ -66,6 +67,51 @@ namespace DataLayer
 
       
                      }
+                }
+                else
+                    Console.WriteLine("NO bookings");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return bookings;
+        }
+
+        public List<Hashtable> GetBookingsByPassengerId(int passengerId)
+        {
+            List<Hashtable> bookings = new List<Hashtable>();
+            try
+            {
+                Qry = "GetBookingDetailsByPassengerId_SP";
+                command = new SqlCommand(Qry, connection);
+                command.CommandType = System.Data.CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("passengerId", passengerId);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Hashtable booking = new Hashtable();
+                        booking.Add("bookingId", (int)reader["bookingId"]);
+                        booking.Add("flightId", (int)reader["flightId"]);
+                        booking.Add("passengerId", (int)reader["passengerId"]);
+                        booking.Add("className", reader["className"].ToString());
+                        booking.Add("seatNo", (int)reader["seatNo"]);
+                        booking.Add("flightDate", Convert.ToDateTime(reader["flightDate"].ToString()));
+                        booking.Add("source", reader["source"].ToString());
+                        booking.Add("destination", reader["destination"].ToString());
+                        booking.Add("arrivalTime", reader["arrivalTime"].ToString());
+                        booking.Add("departureTime", reader["departureTime"].ToString());
+                        bookings.Add(booking);
+
+                    }
                 }
                 else
                     Console.WriteLine("NO bookings");

@@ -6,8 +6,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="3.1.24" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.KeyPerFile" Version="3.1.8" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.21.0" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	  <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.21.0" />
   </ItemGroup>
 
   <ItemGroup>

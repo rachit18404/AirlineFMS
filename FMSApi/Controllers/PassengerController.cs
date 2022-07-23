@@ -50,7 +50,7 @@ namespace FMSApi.Controllers
         {
             try
             {
-                return StatusCode(200, passengerBo.GetByLogin(passenger));
+                return StatusCode(200, passengerBo.Passenger1Login(passenger));
             }
             catch(Exception ex)
             {

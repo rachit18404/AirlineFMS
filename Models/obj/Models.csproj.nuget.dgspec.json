@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj": {}
+    "C:\\Users\\Vara.Prasad\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj": {
+    "C:\\Users\\Vara.Prasad\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\Vara.Prasad\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\Sunil.Sahu.GEP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sunil.Sahu.GEP\\source\\miniproject\\backend\\AirlineFMS\\Models\\obj\\",
+        "projectPath": "C:\\Users\\Vara.Prasad\\source\\miniproject\\backend\\AirlineFMS\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\Vara.Prasad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vara.Prasad\\source\\miniproject\\backend\\AirlineFMS\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sunil.Sahu.GEP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vara.Prasad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

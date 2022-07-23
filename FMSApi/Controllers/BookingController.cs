@@ -45,5 +45,18 @@ namespace FMSApi.Controllers
                 return StatusCode(200, ex.Message);
             }
         }
+        [HttpGet, Route("GetBookingsByPassengerId/{passengerId}")]
+        public IActionResult GetBookingsByPassengerId(int passengerId)
+        {
+            try
+            {
+                return StatusCode(200, bookingBo.GetBookingsByPassengerId(passengerId));
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(200, ex.Message);
+            }
+        }
     }
 }

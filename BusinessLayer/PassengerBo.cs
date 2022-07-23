@@ -31,6 +31,7 @@ namespace BusinessLayer
             try
             {
                 passengers=passengerDao.GetAllPassengers();
+                return passengers;
             }
             catch(Exception ex)
             {
@@ -38,18 +39,25 @@ namespace BusinessLayer
             }
             return passengers;
         }
-        public Passenger GetByLogin(Passenger passenger)
+        public Passenger Passenger1Login(Passenger passenger)
         {
             Passenger p=new Passenger();
             try
             {
-                p = passengerDao.GetByLogin(passenger);
+                p = passengerDao.PassengerLogin(passenger.email, passenger.password);
+                if (p!=null)
+                {
+                    return p;
+                }
+                else
+                {
+                    throw new Exception("User not found");
+                }
             }
             catch(Exception ex)
             {
                 throw ex;
             }
-            return p;
         }
         public void UpdatePassengerInfo(Passenger passenger)
         {

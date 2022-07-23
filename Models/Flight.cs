@@ -5,16 +5,16 @@ namespace Models
     public class Flight
     {
         public int flightId { set; get; }
-        public string flightName { set; get; }
-        public string sourceAddress { set; get; }
-        public string destinationAddress { set; get; }
+        public string name { set; get; }
+        public string source { set; get; }
+        public string destination { set; get; }
         public  string departureTime { set; get; }
         public string arrivalTime { set; get; }
      
-        public long business_seat_price { get; set; }
-        public long economy_seat_price { get; set; }
-        public int business_seat { get; set; }
-        public int economy_seat { get; set; }
+        public long businessPrice { get; set; }
+        public long economyPrice { get; set; }
+        public int businessSeat { get; set; }
+        public int economySeat { get; set; }
 
     
 

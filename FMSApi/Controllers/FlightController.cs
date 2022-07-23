@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Models;
 using BusinessLayer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FMSApi.Controllers
 {
@@ -31,12 +32,13 @@ namespace FMSApi.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-        [HttpGet, Route("SearchFlight")]
+        [HttpPost, Route("SearchFlight")]
+        [Authorize]
         public IActionResult SearchFlight(Flight flight)
         {
             try
             {
-                var flights = flightBo.SearchFlight(flight.sourceAddress,flight.destinationAddress);
+                var flights = flightBo.SearchFlight(flight.source,flight.destination);
                 return StatusCode(200, flights);
             }
             catch (Exception ex)
