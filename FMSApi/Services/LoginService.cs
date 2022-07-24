@@ -17,9 +17,11 @@ namespace FMSApi.Services
     public class LoginService
     {
         private PassengerDao passengerDao;
+        private AdminDao adminDao;
         public LoginService()
         {
             passengerDao = new PassengerDao();
+            adminDao = new AdminDao();
         }
         public Hashtable PassengerLogin(string email, string password)
         {
@@ -41,6 +43,26 @@ namespace FMSApi.Services
                 throw;
             }
         }
+        public Hashtable AdminLogin(string email, string password)
+        {
+            try
+            {
+                Admin admin = adminDao.AdminLogin(email, password);
+                if (admin != null)
+                {
+                    var response = new Hashtable();
+                    response.Add("adminId", admin.adminId);
+                    response.Add("token", GenerateTokenAdmin(admin));
+                    return response;
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        
 
         public string GenerateToken(Passenger passenger)
         {
@@ -61,6 +83,35 @@ namespace FMSApi.Services
                    {
                     new Claim(ClaimTypes.Email, passenger.email),
                     new Claim(ClaimTypes.Sid, passenger.passengerId.ToString())
+                   }),
+                Expires = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var stringToken = tokenHandler.WriteToken(token);
+            return stringToken;
+        }
+
+        public string GenerateTokenAdmin(Admin admin)
+        {
+
+            var _config = new ConfigurationBuilder()
+                               .SetBasePath(Directory.GetCurrentDirectory())
+                               .AddJsonFile("appsettings.json").Build();
+            var issuer = _config["Jwt:Issuer"];
+            var audience = _config["Jwt:Audience"];
+            var expiry = DateTime.Now.AddMinutes(120);
+            var securityKey = new SymmetricSecurityKey
+        (Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
+            var credentials = new SigningCredentials
+        (securityKey, SecurityAlgorithms.HmacSha256);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[]
+                   {
+                    new Claim(ClaimTypes.Email, admin.adminId.ToString())
                    }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature)

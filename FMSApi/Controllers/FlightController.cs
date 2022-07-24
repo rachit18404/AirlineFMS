@@ -12,6 +12,7 @@ namespace FMSApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class FlightController : ControllerBase
     {
         private FlightBo flightBo;
@@ -33,7 +34,6 @@ namespace FMSApi.Controllers
             }
         }
         [HttpPost, Route("SearchFlight")]
-        [Authorize]
         public IActionResult SearchFlight(Flight flight)
         {
             try

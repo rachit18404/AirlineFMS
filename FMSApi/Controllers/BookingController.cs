@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 using Models;
 using BusinessLayer;
 using DataLayer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FMSApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BookingController : ControllerBase
     {
         private BookingBo bookingBo;

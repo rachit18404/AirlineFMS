@@ -29,5 +29,16 @@ namespace FMSApi.Controllers
             }
             return Ok(response);
         }
+
+        [HttpPost, Route("admin")]
+        public IActionResult login(Admin admin)
+        {
+            var response = loginService.AdminLogin("admin", admin.password);
+            if (response == null)
+            {
+                return Unauthorized();
+            }
+            return Ok(response);
+        }
     }
 }
